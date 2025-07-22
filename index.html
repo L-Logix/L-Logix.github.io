@@ -1,14 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Flightradar24 Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neumorphic Flightradar24 Profiles</title>
+  <style>
+    /* General body background for neumorphism */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #333;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-weight: 600;
+      text-shadow: 1px 1px 1px #fff9;
+    }
+
+    /* Container with neumorphic inset effect */
+    .banner-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 40px;
+      border-radius: 30px;
+      background: #e0e0e0;
+      box-shadow:
+        inset 8px 8px 16px #bebebe,
+        inset -8px -8px 16px #ffffff;
+    }
+
+    /* Neumorphic card style for each link */
+    .banner-container a {
+      border-radius: 25px;
+      background: #e0e0e0;
+      box-shadow:
+        8px 8px 15px #bebebe,
+        -8px -8px 15px #ffffff;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      padding: 15px;
+    }
+
+    /* On hover, pop out the card */
+    .banner-container a:hover {
+      box-shadow:
+        4px 4px 8px #bebebe,
+        -4px -4px 8px #ffffff,
+        0 0 15px #81a8ff99;
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
+
+    /* Images inside the cards */
+    .banner-container img {
+      display: block;
+      max-width: 300px;
+      height: auto;
+      border-radius: 20px;
+      user-select: none;
+      pointer-events: none;
+      box-shadow:
+        4px 4px 6px #bebebe,
+        -4px -4px 6px #ffffff;
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Optional: slightly brighten image on hover of parent */
+    .banner-container a:hover img {
+      box-shadow:
+        6px 6px 12px #a3a3a3,
+        -6px -6px 12px #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .banner-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+      }
+      .banner-container img {
+        max-width: 90vw;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Check out my Flightradar24 Profile</h1>
-    <a href="https://my.flightradar24.com/Robotmonk" target="_blank" rel="noopener noreferrer">
-        <img src="https://banners-my.flightradar24.com/Robotmonk.png" alt="My Flightdiary.net profile" />
+  <h1>Check out my Flightradar24 Profiles</h1>
+  <div class="banner-container">
+    <a href="https://my.flightradar24.com/Robotmonk" target="_blank" rel="noopener noreferrer" aria-label="Robotmonk Profile">
+      <img src="https://banners-my.flightradar24.com/Robotmonk.png" alt="Robotmonk Profile Banner" />
     </a>
+
+    <a href="https://my.flightradar24.com/Robotmonk" target="_blank" rel="noopener noreferrer" aria-label="Robotmonk Future Profile">
+      <img src="https://banners-my.flightradar24.com/Robotmonk-future.png" alt="Robotmonk Future Profile Banner" />
+    </a>
+  </div>
 </body>
 </html>
